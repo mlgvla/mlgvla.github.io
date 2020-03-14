@@ -1,11 +1,11 @@
 # Site settings
 author: Monica Gerard
-title: 
+title: If the shoe fits...
 header-img: img/home-bg.png
 email: mlgerardvla@gmail.com
 copyright_name: Monica Gerard
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Doing what comes naturally...
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  mlgvla
