@@ -16,7 +16,7 @@ Ok, Google is my friend.  Was it too specific an issue for some wizard on Stack 
 
 `nbsp = Nokogiri::HTML("&nbsp;").text`
 
-This takes the HTML-edness away from the non-breaking space and converts to a space character that Ruby can happily deal with. So then,
+This takes the HTML-edness away from the non-breaking space and converts it to a space character that Ruby can happily deal with. So then,
 
 `string.sub(nbsp, "")`
 
