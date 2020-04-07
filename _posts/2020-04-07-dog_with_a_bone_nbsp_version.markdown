@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Dog with a bone ("nbsp" version)"
-date:       2020-04-07 18:17:47 +0000
+date:       2020-04-07 14:17:48 -0400
 permalink:  dog_with_a_bone_nbsp_version
 ---
 
