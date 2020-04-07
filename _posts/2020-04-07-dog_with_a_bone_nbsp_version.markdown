@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Dog with a bone"
+title:      "Dog with a Bone"
 date:       2020-04-07 14:17:48 -0400
 permalink:  dog_with_a_bone_nbsp_version
 ---
