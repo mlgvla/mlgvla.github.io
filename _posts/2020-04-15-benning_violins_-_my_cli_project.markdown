@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Benning Violins - My CLI Project"
-date:       2020-04-16 02:40:40 +0000
+date:       2020-04-15 22:40:41 -0400
 permalink:  benning_violins_-_my_cli_project
 ---
 
 
 This was really quite an adventure!  I went through several different project ideas, when it finally occured to me to code a project concerning web content I knew something about...string instruments.  I figured that would help me figure out the most important information to scrape from a website.  So, I picked a  string shop that sells fine violins, violas, cellos, bows, plus instruments made by the Benning family.  I have a lot of friends that deal in musical instruments, so I had them in mind as an end user.
 
-I divided my project into 4 classes:  CLI, Inventory, Instrument, and Scraper.  First, I worked out my scrapes using Scraper Checker on Repl.it.  There were several challenges here.  One of my menus had nested selections, so I had to scrape two separate menus and then combine them to make the main Inventory menu in my application. I had severall issues with the data in my scrapes.  One was dealing with HTML non-breaking spaces.  The other dealt to label names in `<strong>` tags being included in my data scrapes.  For example, "**Instrument Maker:**  Douglas Cox" After poking around the Internet, I found a simple solution using Nokogiri. to deal with the non-breaking space.  I also had to come up with a Regex to eliminate the label, leaving me with the pure data I wanted to store.  However, the labels in the HTML did help to match the data with the attributes in the Instrument Class.
+I divided my project into 4 classes:  CLI, Inventory, Instrument, and Scraper.  First, I worked out my scrapes using Scraper Checker on Repl.it.  There were several challenges here.  One of my menus had nested selections, so I had to scrape two separate menus and then combine them to make the main Inventory menu in my application. I had severall issues with the data in my scrapes.  One was dealing with HTML non-breaking spaces.  The other dealt with label names in `<strong>` tags being included in my data scrapes.  For example, "**Instrument Maker:**  Douglas Cox" After poking around the Internet, I found a simple solution using Nokogiri. to deal with the non-breaking space.  I also had to come up with a Regex to eliminate the label, leaving me with the pure data I wanted to store.  However, the labels in the HTML did help to match the data with the attributes in the Instrument Class.
 
 ```
 nbsp = Nokogiri::HTML("&nbsp;").text #convert HTML nbsp to text nbsp
