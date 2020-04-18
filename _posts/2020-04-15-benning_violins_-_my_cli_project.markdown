@@ -27,7 +27,25 @@ require 'word_wrap/core_ext'
 
 Reading the "issues" on GitHub, cleared that up for me.
 
-The wonderful team at "Ask a Question" has to essentially "shun" you duriing your CLI Project.  It's tough love, to be sure, but you learn SO MUCH from having to solve all these issues on your own.  The actual coding of my project was the easy part - all our labs and video demonstrations of project creation really help with that.  But  I had to figure out how to fix my Pry issue (2 installs seemed to correct that), dealing with HTML non-breaking spaces (thank you Stack Overflow!), and getting my environment file set up, I learned that you need to fill out your Gemspec or your "irb" will not work and spew out the worst possible mess.  I feel like I really understand how all of this is organized now.
+Of course, I did spend a lot of time testing my program.  It seemed to be unbreakable...until I attempted to see details on a particular violin, which the website failed to have a webpage for.  The dreaded "404 - Page Not Found" error and my program terminated. I went over to the website, and sure enough, the web page for that link was miising. What to do?  I had to  include all instruments in the inventory.  So I looked at the error on my terminal and saw that it was raised by OpenURI:HTTPError when the page was not found.  Time to review error handling, which was covered in a previous module.  I poked around the Internet and looked as several articles that illustrated how to rescue your program from a specific error.  I played around with some code in Repl.it to gain further understanding of how to manage good and bad webpage links and came up with a block of code that I put into my scrape_instruments_details method:
+
+```
+ site = BASE_PATH + instrument.url
+
+    begin
+    opened_site = open(site)
+    
+    rescue OpenURI::HTTPError
+      puts "Page Not Found.  Details Not Avaiable for this Selection."
+      return
+    end
+```
+
+This code handles the missing web page, explains to the user the issue, returns out of the method, leaving NIL values in the details for that violin.  My CLI class displays NIL detail values as "N/A" (Not Available).  If no error is generated, the method runs normally and fills in attributes with details.
+
+
+
+The wonderful team at "Ask a Question" has to essentially "shun" you duriing your CLI Project.  It's tough love, to be sure, but you learn SO MUCH from having to solve all these issues on your own.  The actual coding of my project was the easy part - all our labs and video demonstrations of project creation really help with that.  But  I had to figure out how to fix my Pry issue (2 installs seemed to correct that), dealing with HTML non-breaking spaces (thank you Stack Overflow!), and getting my environment file set up, I learned that you need to fill out your Gemspec or your "irb" will not work and spew out the worst possible mess.  I feel like I really understand how all of this is organized now.  All of that gave me the confidence to try and figure out how to rescue my program from an error that was caused by an external factor.
 
 Yes, there is more I could do to my project to improve the interface, but what I have now seems to work OK.  The user can chose and inventory, look at it, and pick an specific item to see more details.  Then they can pick a new inventory and essentailly rinse and repeat until they've had enough and type "exit".  There comes a point where you have to say that it's OK to move on.  Just make a refactor wish list and try to tinker with it more in those odd moments or when you want to develop a new skill.
 
