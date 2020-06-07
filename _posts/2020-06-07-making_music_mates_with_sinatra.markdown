@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Making Music Mates with Sinatra"
-date:       2020-06-07 23:52:07 +0000
+date:       2020-06-07 19:52:08 -0400
 permalink:  making_music_mates_with_sinatra
 ---
 
@@ -74,7 +74,7 @@ In addition to these macros, I made sure that my routes made use of helper metho
 
 I also utilized ActiveRecord’s error method, which taps into the validation macros set up in the user model.  Upon failure when triggered by .save or .update, the error method informs the user why the signup or update failed:
 
-"Account creation failed:  #{@user.errors.full_messages.to_sentence}."
+`Account creation failed:  #{@user.errors.full_messages.to_sentence}.`
 
 Such code would generate a message like: “Account creation failed: Last name can't be blank.”
 
