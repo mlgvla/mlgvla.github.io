@@ -13,8 +13,6 @@ Of course, I initially had bigger ideas for this project – for example, musici
 
 Music Mates is based on 3 models: User, UserInstrument, and Instrument.
 
-![](https://drive.google.com/file/d/1CI3zO51cpVjc7_uEYKY7NCtUCRG1jEmq/view?usp=sharing)
-
 Originally, UserInstrument had an additional attribute of “level,” but I removed it for the time being to keep my database limited to what I’ve implemented for this project.  I decided to use checkboxes for users to select the instruments they play (a standard prescribed list for now), and radio buttons to select either a public or private profile.
 
 Checkboxes actually handle their own updating in Sinatra with ActiveRecord, and using them posed an interesting challenge and a bug that needed to be addressed.  I used a complex form in the view for my Edit Profile page and rendered the checkboxes with the following code:
