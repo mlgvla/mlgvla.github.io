@@ -11,7 +11,9 @@ Just a few weeks ago, I really didn’t know what I was going to do for my Sinat
 
 Of course, I initially had bigger ideas for this project – for example, musicians could “level” themselves and others can search for musicians not only by instrument, but at the level they play them at (e.g. Beginner, Intermediate, Advanced, Professional, etc.).  I went as far as perfecting the ActiveRecord searches to do just that, but then realized that the interface would probably go beyond the essentials for the project.  So, I stuck with instruments and privacy as my search constraints.  Eventually, musicians could add audio and video links to their profile, personal statements, preferred repertoire, availability, etc.  All these functions are now on my list of stretch goals for future implementation.
 
-Music Mates is based on 3 models: User, UserInstrument, and Instrument.
+Music Mates is based on 3 models: User, UserInstrument, and Instrument:
+
+<a href="https://imgur.com/G8DY141"><img src="https://i.imgur.com/G8DY141l.jpg?1" title="source: imgur.com" /></a>
 
 Originally, UserInstrument had an additional attribute of “level,” but I removed it for the time being to keep my database limited to what I’ve implemented for this project.  I decided to use checkboxes for users to select the instruments they play (a standard prescribed list for now), and radio buttons to select either a public or private profile.
 
