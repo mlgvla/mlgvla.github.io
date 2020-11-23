@@ -13,7 +13,7 @@ Of course, I initially had bigger ideas for this project – for example, musici
 
 Music Mates is based on 3 models: User, UserInstrument, and Instrument:
 
-<a href="https://imgur.com/G8DY141"><img src="https://i.imgur.com/G8DY141l.jpg?1" title="source: imgur.com" /></a>
+<a href="https://imgur.com/2jaLPT2"><img src="https://i.imgur.com/G8DY141l.jpg?1" title="source: imgur.com" /></a>
 
 Originally, UserInstrument had an additional attribute of “level,” but I removed it for the time being to keep my database limited to what I’ve implemented for this project.  I decided to use checkboxes for users to select the instruments they play (a standard prescribed list for now), and radio buttons to select either a public or private profile.
 
