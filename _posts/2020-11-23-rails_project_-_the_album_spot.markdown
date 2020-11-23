@@ -12,7 +12,7 @@ I utilized several Ruby gems in writing this app.  I used Omniauth for the optio
 I also made extensive use of Bootstrap for styling.  Using the Bootstrap-Form gem helped to keep my forms uniform in appearance to the rest of the app.  I also used some star icons from Font Awesome for my star rating system.
 The Album Spot uses five models:  User, Album, UserAlbum, Review, and Artist.  UserAlbum acts as the join table:
 
-![](https://i.imgur.com/zGZSJCX.png)
+![](https://i.imgur.com/zGZSJCX.png?1)
 
 Note that a UserAlbum has one Review and a Review belongs to a user album.  This association was used throughout the app!!!!
 
