@@ -1,14 +1,11 @@
 ---
 layout: post
 title:      "Rails Project - The Album Spot"
-date:       2020-11-23 23:16:42 +0000
+date:       2020-11-23 18:16:43 -0500
 permalink:  rails_project_-_the_album_spot
 ---
 
 
-
-
- ![](https://i.imgur.com/9FpabzY.png)
 
 For my Rails project, The Album Spot, I wanted to work with an API to gain experience working with an external database and mapping it into my application’s database.  Spotify has a terrific API that gives one access to an extensive database of artists, albums, music, and general information.  I decided to write an app that would allow the user to search the Spotify database of artists, view the artist’s albums, and add albums to their personal collection in the app.  Plus, the user can listen to the albums in their entirety, provided they have a Spotify account.  Finally, a user can write reviews and rate their albums and read other user’s reviews of albums.  I also wanted this app to be visual, as well, so I used album art throughout the app to make it feel more like a real album collection.
 I utilized several Ruby gems in writing this app.  I used Omniauth for the option to log in through Github. RSpotify is a gem that acts as a Ruby wrapper to facilitate accessing data from the Spotify API.  It necessitates obtaining a Client ID and Client Secret, since most requests to the API need to be authorized.  I put this information into an initializer file using ENV variables for the Client ID and Client Secret
