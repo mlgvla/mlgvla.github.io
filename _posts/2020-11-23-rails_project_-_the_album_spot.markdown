@@ -5,6 +5,7 @@ date:       2020-11-23 18:16:43 -0500
 permalink:  rails_project_-_the_album_spot
 ---
 
+![](https://i.imgur.com/uI4dIUy.png?1)
 
 
 For my Rails project, The Album Spot, I wanted to work with an API to gain experience working with an external database and mapping it into my application’s database.  Spotify has a terrific API that gives one access to an extensive database of artists, albums, music, and general information.  I decided to write an app that would allow the user to search the Spotify database of artists, view the artist’s albums, and add albums to their personal collection in the app.  Plus, the user can listen to the albums in their entirety, provided they have a Spotify account.  Finally, a user can write reviews and rate their albums and read other user’s reviews of albums.  I also wanted this app to be visual, as well, so I used album art throughout the app to make it feel more like a real album collection.
@@ -12,7 +13,7 @@ I utilized several Ruby gems in writing this app.  I used Omniauth for the optio
 I also made extensive use of Bootstrap for styling.  Using the Bootstrap-Form gem helped to keep my forms uniform in appearance to the rest of the app.  I also used some star icons from Font Awesome for my star rating system.
 The Album Spot uses five models:  User, Album, UserAlbum, Review, and Artist.  UserAlbum acts as the join table:
 
-![](https://i.imgur.com/zGZSJCX.png?1)
+![](https://i.imgur.com/ABG7Wux.png?1)
 
 Note that a UserAlbum has one Review and a Review belongs to a user album.  This association was used throughout the app!!!!
 
