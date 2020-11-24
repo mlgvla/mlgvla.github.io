@@ -8,9 +8,12 @@ permalink:  rails_project_-_the_album_spot
 ![](https://i.imgur.com/uI4dIUy.png?1)
 
 
-For my Rails project, The Album Spot, I wanted to work with an API to gain experience working with an external database and mapping it into my application’s database.  Spotify has a terrific API that gives one access to an extensive database of artists, albums, music, and general information.  I decided to write an app that would allow the user to search the Spotify database of artists, view the artist’s albums, and add albums to their personal collection in the app.  Plus, the user can listen to the albums in their entirety, provided they have a Spotify account.  Finally, a user can write reviews and rate their albums and read other user’s reviews of albums.  I also wanted this app to be visual, as well, so I used album art throughout the app to make it feel more like a real album collection.
-I utilized several Ruby gems in writing this app.  I used Omniauth for the option to log in through Github. RSpotify is a gem that acts as a Ruby wrapper to facilitate accessing data from the Spotify API.  It necessitates obtaining a Client ID and Client Secret, since most requests to the API need to be authorized.  I put this information into an initializer file using ENV variables for the Client ID and Client Secret
+For my Rails project, The Album Spot, I wanted to work with an API to gain experience working with an external database and mapping it into my application’s database.  Spotify has a terrific API that gives one access to an extensive database of artists, albums, music, and general information.  I decided to write an app that would allow the user to search the Spotify database of artists, view the artist’s albums, and add albums to their personal collection in the app.  Plus, the user can listen to the albums in their entirety, provided they have a Spotify account.  Finally, a user can write reviews and rate their albums and read other user’s reviews of albums.  I also wanted this app to be visual, as well, so I used album art throughout the app to make it feel more like a real album collection
+.
+I utilized several Ruby gems in writing this app.  I used Omniauth for the option to log in through Github. RSpotify is a gem that acts as a Ruby wrapper to facilitate accessing data from the Spotify API.  It necessitates obtaining a Client ID and Client Secret, since most requests to the API need to be authorized.  I put this information into an initializer file using ENV variables for the Client ID and Client Secret.
+
 I also made extensive use of Bootstrap for styling.  Using the Bootstrap-Form gem helped to keep my forms uniform in appearance to the rest of the app.  I also used some star icons from Font Awesome for my star rating system.
+
 The Album Spot uses five models:  User, Album, UserAlbum, Review, and Artist.  UserAlbum acts as the join table:
 
 ![](https://i.imgur.com/ABG7Wux.png?1)
@@ -36,7 +39,7 @@ def self.create_album_from_spotify(spotify_album)
     end
 ```
 
-It's always nice for a review app to have a star rating system!  In my app, star ratings either pertain to a user’s review of an album in their colleion, or are averaged across all reviews left by users that have the same album in their collection.  Also, the star ratings appear in several different locations throughout the app, so I decided to put the star review HTML and logic in a partial, `_stars` to which I send an integer value, whether that is from a user review, or an average of user reviews.  The  the filled and empty star graphics are courtesy of Font Awesome, which is a great resource to spiff up your app with cool icons.  
+It's always nice for a review app to have a star rating system!  In my app, star ratings either pertain to a user’s review of an album in their colleion, or are averaged across all reviews left by users that have the same album in their collection.  Also, the star ratings appear in several different locations throughout the app, so I decided to put the star review HTML and logic in a partial, `_stars` to which I send an integer value, whether that is from a user review, or an average of user reviews.  The  filled and empty star graphics are courtesy of Font Awesome, which is a great resource to spiff up your app with cool icons.  
 
 ```
 <% stars.times do%>
@@ -69,7 +72,7 @@ def average_user_rating
         end   
 end
 ```
-I also had to write a lot of “button” logic into this app – always checking to see if an album was reviewed or had one to be edited, or yet to be added to the user's collection. So I created a ` _button` partial to handle that.
+I also had to write a lot of button logic into this app – always checking to see if an album was reviewed or had one to be edited, or yet to be added to the user's collection. So I created a `_button` partial to handle that.
 
 All in all, I had to flex a LOT of different coding muscles to create this app.  It was extremely helpful for me to review a lot of the Rails material a second time.  I also gained a greater understanding of working with Bootstrap, Font Awesome, and the Spotify API.  The Rails Project is a great opportunity to stretch your skills in all directions and build a solid foundation for what’s ahead!
 
